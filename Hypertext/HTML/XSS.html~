@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="widt=device-width, initial-scale=1.0"/>
+	<title> XSS</title>
+    </head>
+    <body>
+	<div class="header">
+	    <h1>XSS</h1>
+	</div>
+	<p>
+	<cite> That is Java-Script! I'm gonna run that!</cite> - <b>every</b> Browser ever.
+	<div class="article">
+	  <h3> Definition </h3>
+	  <p class="left">
+	      Cross-Site Scripting (XSS) nutzt eine Sicherheitslücke in der angegriffenen Anwendung aus
+	      und kann dazu verwendet werden, Daten einer Originalseite zu verändern und zählt damit zu den aktiven Angriffen.
+	      Beim XSS werden Informationen durch einen Angreifer in eine vermeintlich sichere Seite eingebettet.
+	  </p>
+	  <h3> Typen von XSS </h3>
+	  <h4> Reflektiertes XSS </h4>
+	  <p>
+	    Das reflektierte - oder auch serverseitige - XSS ist der häufigste Vertreter von XSS-Angriffen
+	    und wird im Phishingmarkt angewendet.
+	    Hierbei muss ein Opfer eine präparierte URL anklicken. In Variablen und Parametern dieser URL wird Code eingefügt,
+	    den die Anwendung auf dem Server übernimmt und in die Webseite einbettet.
+	    Das kann ein Suchausdruck, ein Username oder auch eine E-Mail Adresse sein.
+	    Der Angriff läuft folgendermaßen ab:
+	    die vom Angreifer veränderte URL wird durch ein Opfer angeklickt und somit an den betroffenen Server als Anfrage verschickt.
+	    Hier ist die Web-Applikation fehlerhaft und ermöglicht es dem Angreifer,
+	    den dynamisch generierten HTML-Code zu verändern. Der Benutzer sieht nun die manipulierte Seite in seinem Browser. 
+	  </p>
+	  <h4> Beständiges XSS</h4>
+	  <p> Auch das persistente XSS ist Serverseiteig, d.h. die Veränderungen werden auf dem Server
+	    vorgenommen und der Schadcode wird über die URL an den Browser zurück geschickt, hier wird
+	    allerdings der Inhalt der Datenbank ebenfalls verändert. Deswegen kann dieser Schadcode
+	    auch Benutzer erreichen die die manipulierte URL nicht angeklickt haben.
+	    Um die Attacke zu starten, reicht es hier völlig, wenn der Angreifer selbst den manipulierten Link anklickt.
+	    Dieser Angriff wird zwar ähnlich dem reflektierenden XSS ausgelöst, verläuft aber etwas anders.
+	    Wie schon beschrieben, ruft der Angreifer eine manipulierte URL auf und sendet somit eine Anfrage an den Server.
+	    Die fehlerhafte Web-Applikation verarbeitet die Anfrage und speichert den injizierten Code in der Datenbank.
+	    Von nun an wird jeder Besucher dieser Seite den veränderten HTML-Code vorfinden</p>
+	  <h4> Lokales XSS </h4>
+	  <p>
+	    Wie der Name schon vermuten lässt, ist das lokale XSS clientseitig,
+	    d.h. der komplette Angriff findet auf dem Rechner des Opfers statt.
+	    Dieser Angriff findet häufig bei Web 2.0 Anwendungen statt,
+	    da hier der Java oder Java-Script Code im Browser des Benutzers ausgeführt wird.
+
+	    Da der Angriff im Browser des Benutzers stattfindet,
+	    wird auch der schädliche Code in der Sprache des Browsers gehalten und wird als Parameter an die Webseite übergeben.
+	    Falls dieser Code in der Webseite wieder enthalten ist, kann es passieren,
+	    dass der Browser des Benutzers diesen Code ausführt und evtl.
+	    Daten in ein Formular der generierten Seite einträgt, die anschließend an den Angreifer weitergeleitet werden.
+
+	    Besonders gefährlich wird dieser Angriff, wenn die manipulierte Seite besondere Rechte im Browser besitzt.
+	    Je nach verwendeter Skriptsprache könnte die manipulierte Anwendung Cookies mit Anmeldeinformationen stehlen
+	    oder mit den Rechten des lokalen Benutzers Daten auf dem Rechner verändern.
+	    Dies könnte sich besonders bei Windows-Systemen als fatal erweisen,
+	    da der lokale Benutzer oft gleichzeitig der Administrator ist.
+
+	    Ein Angriff würde wie folgt ablaufen: der Benutzer klickt wieder eine manipulierte URL an
+	    und schickt damit eine Anfrage an die Web-Applikation. Diese antwortet, indem der Skriptcode
+	    (der fehlerhaft, jedoch nicht manipuliert ist) an den Browser übergeben wird,
+	    um dort die Ausführung des Skripts zu starten. Die manpulierten Parameter aus der URL werden nun im Browser des Benutzers
+	    als Teil des Skripts interpretiert und ausgeführt.
+	    Über DOM-Zugriffe wird die im Browser dargestellte Webseite verändert, der Benutzer sieht nun die manipulierte Seite
+	  </p> 
+	<nav>
+	    <ul>
+		<li><a href="./Homepage.html">Zurück zur Homepage</a></li>
+	    </ul>
+	</nav>
+	    </p>
+	</div>    
+    </body>
+</html>

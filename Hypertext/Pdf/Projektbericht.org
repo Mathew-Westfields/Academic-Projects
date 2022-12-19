@@ -1,0 +1,62 @@
+#+AUTHOR: Matthias Westenfelder
+* Projektbericht 
+** Thema
+Mein Hypertext Projekt dreht sich um Samy Kamkar und beschäftigt sich insbesondere mit dem Virus JS.Spacehero,
+der MySpace gecrasht hat und insgesamt über eine Millionen Nutzer in 20 Stunden infiziert hat.
+Die Geschichte zu dem Virus ist eine sehr unterhaltsame und oben drein ist eben XSS eine HTML-Injektion.
+Es passt Thematisch also auf eine Ironische Art und Weise dazu Hypertext zu nutzen um eine Geschichte über so eine Injektion zu erzählen
+und mögliche Sicherheitslücken der Standart Web-Tools etwas besser zu beleuchten.
+** Die HTML Strucktur
+Meine Wahl fiel auf HTML5 einerseits weil die Doctype declaration weniger fehler anfällig war und ich die Deklaration des charset als sehr
+angnehm empfand.
+Das nav Element war ebenso ein Faktor der mich von HTML5 überzeugte.
+
+*** Homepage
+Ich habe eine Homepage,erstellt von der alle Seiten per interner Hyperlinks zu erreichen sind.
+Das Zweispalten Layout zusammen mit der Kopfzeile ergab sich als angenehme Lösung da die Aufmerksamkeit automatisch auf den wichtigen
+Stellen liegt.
+Diese Homepage hat den Nutzen, dass ich dort einmal Samy Kamkar und das Thema schnell vorstellen kann.
+Und gleichzeitig auf die Texte verweisen kann ,die ins XSS einführen und den Text über die Geschichte non-linear erreichbar machen kann.
+Wer schon Cross site scripting versteht bekommt durch die ,direkt in der Kopfzeile eingebauten Navigation ,die Möglichkeit direkt zur
+Geschichte zu springen.
+Jeder der nicht mit diesen Konzepten vertraut ist wird in der dem Deutschen üblichen Leseart erst den Link zur Einführung ins XSS sehen und
+vermutlich auch als erstes diesen Link anklicken.
+
+*** XSS
+Der Abschnitt über Cross Site Scripting ist mit der Intention gegliedert, erst die Grundlegenden Begriffe und Ideen einzuführen und danach
+das Grundlegende Sicherheitsproblem von JavaScript auf zu zeigen.
+Deshalb ist auch hier ein normales Article Format anbracht.
+Das Beispiel soll verdeutlichen wieso JavaScript auch für jedermann gefährlich sein kann und was auszeichnende Eigenschaften davon sind.
+Am Ende der Seite noch ein paar Inspirationen per externen Links für den tieferen Einstieg in die Materie und ein Link der einen zurück zur
+Homepage navigieren lässt.
+Die zusätzliche extern verlinkte Seite um XSS einmal selber aus zu probieren, dient hier bei als Konkretes Beispiel für die Anwendung.
+
+*** Die Geschichte.
+Der Abschnitt über die Geschichte von JS.Spacehero ist wie ein linearer Text gedacht.
+Der Text ist durchwegs mit Hypertext Elementen versehen um die Geschichte auf eine Art zu erzählen die mit herkömmlichem Text nicht möglich
+wäre.
+Die Phase der Erkundung und die Motivation überhaupt in MySpaces Code rum zu schnüffeln sollen am anfang nahe gelegt werden.
+Darauf folgt eine sehr stark runtergebrochene Erklärung davon was der Schadcode eigentlich tut.
+Der Mittelteil versucht eine möglichst detailierte Betrachtung in die einzelnen "Schlüssel"-Timestamps zu ermöglichen.
+Hier werden Bold Elemente benutzt um wichtige Kennungen zum hervorstechen zu bringen.
+Der Postmortem Teil ist so zu sagen da um die Ereignisse die daraus folgten, nach dem der Schaden so zu sagend schon angerichtet war zu
+klären.
+Weitere Informationen wie die Exploid-Erklärung und der Ereignissbericht von Samy Kamkar an dem ich mich maßgeblich orientiert und
+inspiriert habe, habe ich per Externem Link angehagen.
+
+** CSS
+*** Allgemeines CSS
+Die Entscheidungen im CSS haben vor allem den Grund einen ästhetischen Kontrast zu geben so ,dass leicht erkennbar ist wo Zusatzinfos und
+Links sind die "tiefer" in die Materie führen.
+Für meine Ziele stand Lesbarkeit absolut im Fordergrund! Deshalb habe ich mich nur sehr wenig von der Grundlegenden HTML Form entfernt.
+Das Schrift Template habe ich von Übung 3 so vollkommen übernommen ,da es mir beim Konstruieren der Übung schon sehr zusagte!
+
+*** Article
+Nur die Article class habe ich mit etwas margin versehen ,damit unter anderem die Texte einfacher lesbar werden.
+
+*** Zweispalten Layout
+Das Zwei Spalten Layout der Homepage erzeugte ich mit der row class, in der ich dann die entsprechende row in columns unterteilte die ich
+mit dem flex attribut jeweils zu 50% aufteilte.
+
+
+

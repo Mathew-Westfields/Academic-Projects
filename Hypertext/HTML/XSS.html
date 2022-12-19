@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="widt=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" 
+	type="text/css" 
+	href="../CSS/main.css" />
+	<title> XSS</title>
+    </head>
+    <body>
+	<div class="header">
+	    <h1>XSS</h1>
+	</div>
+	<p>
+	<cite> That is Java-Script! I'm gonna run that!</cite> - <b>every</b> Browser ever.
+	<div class="article">
+	  <h3> Definition </h3>
+	  <p class="left">
+	    Cross-Site Scripting (XSS) ist eine Form Injektions Attacke.
+	    Alle Injektions Attacken versuchen, per User-Input dem Server/Compiler Instruktionen unter zu schieben ,die er eigentlich nicht
+	    auswerten sollte. Die zwei populärsten Attacken im Netz sind beide Injektions Attacken.
+	    Cross-Site Scripting im Allgemeinen versuchen alle irgendwie ein &lt;script&gt; some_JavaScript_function(); &lt;/script&gt;
+	    zu injizierten. Das heißt es ist eine HTML-Injektion die es wiederrum erlaubt Javascript auszuführen.
+	    Dies kann auf eine Menge Wege passieren, diese Form der Attacke nutzt sämtlichen nicht "sanitären"-Userinput aus.
+	    Und wie man gleich und spätestens nach der Geschichte von JS.Spacehero merkt kann JavaScript ziemlich gefährliche Sachen machen.
+	  </p>
+	  <h3> JavaScript </h3>
+	  <h4> das Problem mit JS</h4>
+	  <p>
+	    JavaScript ist ein Programmiersprache die vollständig im Browser implementiert läuft.
+	    Dieser Fakt macht es in der Informationszeit wo fast alles Internet Anbindung hat zu einem verstörend mächtigem Werkzeug.
+	    Und diese Formulierung ist nicht hyperbolisch, JavaScript diktiert was der Browser tut und obendrein ist es <b>Überall</b>.
+	    Jedes Mal wenn ein Webpage im Hintergrund sich leise refreshed oder irgendwas passiert ohne dass die Seite komplett neu geladen
+	    werden muss hat JavaScript seine Finger im Spiel.
+	    Und das aller schlimmste daran ist ,dass JavaScript leise im Hintergrund ausgeführt wird.
+	    Das kann man auch nicht "reparieren" das ist eine definierende Eigenschaft weshalb es benutzt wird.
+	  </p>
+	  <h4> Ein Beispiel</h4>
+	  <p> Man stelle sich vor ich habe mein php verbockt.(Php benutzt man für viele Dinge unter anderem um User-Input auszuwerten)
+	    Ich habe meine eigene kleine Webseite geschrieben, die einem einfach nur Hallo sagt.
+	    Man schreibt seinen Vornamen in ein Eingabefeld, schickt es ab und das Programm sagt einem Hallo "Vorname".
+	    Das sind umgerechnet ca. 3-4 Zeilen php nicht viel Platz für Fehler würde man denken.
+	    Nur blöd ist, dass mein hypothetischer Php Code den User-Input roh entgegen nimmt.
+	    Ziemlich schlecht gelaufen, ein neugieriger Mensch gibt &lt;script&gt; alert(""); &lt;/script&gt;
+	    ein und das alert fenster poppt auf.
+	    Der neugierige Mensch hat auch noch ne kriminelle Ader und hinterlässt nen JavaScript,
+	    dass jedem Browser sagt: "bitte einmal <b>alle</b> Session-Cookies und Passwörter die du hast! Danke."
+	    Das heißt ,jeder Benutzer der auf diese Seite klickt ist jetzt seine Session-Cookies , gespeicherten Passwörter usw. los.
+	    Und das alles ohne das der Browser auch nun piep macht.
+	    </p>
+	  <h4> Mehr Informationen</h4>
+	  <p> Hier findet man einige brauchbare Informationen zu XSS:</p>
+	  <nav>
+	    <ul>
+	  <li><a href="https://de.wikipedia.org/wiki/Cross-Site-Scripting"> Wikipedia-Artikel</a></li>
+	  <li><a href="https://www.youtube.com/playlist?list=PLhixgUqwRTjx2BmNF5-GddyqZcizwLLGP"> LiveOverflow's exzellenten Videos</a></li>
+	  <li><a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)">Für einen tieferen Einblick
+	    in die verschiedenen Arten des XSS</a></li>
+	    </ul>
+	  </nav>	
+	  <nav> 
+		<a href="./Homepage.html">Zurück zur Homepage</a>
+	</nav>
+	</div>    
+    </body>
+</html>

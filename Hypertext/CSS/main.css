@@ -1,0 +1,23 @@
+body {font-family:verdana, helvetica, arial, sans-serif; background-color:white; color:black;}
+.article {padding:50px; margin-left:2.5%; margin-right:2.5%;}
+.header {text-align:left; margin-bottom:15pt; 
+font-size: 16pt; 
+font-variant:small-caps;}
+.footer {text-align:center; 
+font-size:10pt;}
+.row{
+    display: flex; 
+}
+.column{
+    flex: 50%;
+}
+
+ul {
+    list-style-type: none;
+    width:auto;
+    align-self: auto;
+    border: 1px solid;
+    background-color: silver;
+}
+
+

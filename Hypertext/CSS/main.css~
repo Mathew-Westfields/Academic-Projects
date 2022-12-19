@@ -1,0 +1,16 @@
+body {font-family:verdana, helvetica, arial, sans-serif; background-color:white, color:black;}
+.article {padding:50px;}
+.header {position:center;margin-bottom:15pt; 
+font-size: 16pt; 
+font-variant:small-caps;}
+.footer {text-align:center; 
+font-size:10pt;}
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+ul {
+    list-style-type: none;
+    width: 10em;
+    border: 1px solid;
+    backgroud-colour: silver;
+}

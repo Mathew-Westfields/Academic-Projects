@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="widt=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" 
+	type="text/css" 
+	href="../CSS/main.css" />
+	<title>XSS Spielplatz</title>
+    </head>
+    <body>
+	<div class="header">
+	    <h1>Spielplatz</h1>
+	    <h2>Spaß haben mit schlechtem php</h2>
+	</div>
+	<div class="article">
+	    <p>
+	      Dieser Link führt zu einer Webseite die ein Vorsätzlich schlechtes php Eingabe fenster hat.
+	      Probieren sie für das erste Level einfach mal folgendes aus:
+	    </p>
+	    <p>
+	      &lt;script&gt; alert("XSS!");&lt;/script&gt;
+	    </p>
+	    <ul>
+	     <li>
+	       <a href = "https://xss-game.appspot.com/level1"> Das XSS Spiel </a>
+	     </li>
+	     </ul>
+	    <nav>
+		<a href="./Homepage.html">Zurück zur Homepage</a>
+	    </nav>
+	   </div>
+    </body>
+</html>

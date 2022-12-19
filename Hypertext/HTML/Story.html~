@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="widt=device-width, initial-scale=1.0"/>
+	<title>Die Geschichte von JS.Spacehero</title>
+    </head>
+    <body>
+	<div class="header">
+	    <h2>die Geschichte von JS.Spacehero</h2>
+	    <p><cite> I aim to misbehave. </cite> - &ltscript&gt alert("XSS!");&lt/script&gt </p>
+	</div>
+	<div class="article">
+	    <p>
+		Ein paar Monate zuvor saß der damals 19 jährige Samy Kamkar vor seinem Rechner und beschloss endlich ein
+		permanentes MySpace Profil anzulegen.
+		Er war es leid geworden immer wieder mit falschen Email Adressen kurzezeit Profile sich an zu legen um Fotos von Freunden
+		zu sehen. Er hörte sogar gute Sachen von Freunden, Leute für Dates kennen lernen und ähnliches komplett online.
+		Gesagt getan, doch ihm stochen einige Dinge negativ ins Auge, die Headline character-restriction machte es förmlich
+		unmöglich lange Headlines zu benutzten und außerdem war nur die Möglichkeit 12 Fotos von sich unter zu bringen.
+		Also fing er wie jeder gute 19 Jährige ,der mit 16 von der Highschool geflogen ist an, an den Rechten und Beschränkungen
+		von MySpace rum zu fummeln. Er fand einen Weg <s>coole</s> <i> coole</i> HTML Elemente in seine Texte ein zu binden und das
+		Headline Character limit zu überschreiten. Schon da sollten sich einige Alarmglocken melden, wenn ich HTML injezieren kann
+		und an einigen Stellen die Rechte umgehen kann, was kann ich noch machen?
+		Samy stellte sich die selbe Frage und machte sich über Wochen dran diese Frage zu beantworten.
+		Die Antwort bestand aus einem Bug, der es erlaubte JavaScript in die Seite zu injezieren.
+		Java-Script ist, wie im XSS Abschnitt erklärt, sehr mächtig. Wer das JavaScript kontrolliert ,kontrolliert den kompletten
+		Browser des Opfers. Also machte sich Samy daran, endlich die MySpace Popularität sich zu erarbeiten, die er
+		ohne Zweifel verdiente.
+	    </p>
+	    <p>
+		<b>Das Skript ,dass er schrieb hatte die folgende Funktion:</b>
+	    </p>
+	    <h4> Schritt 1</h4>
+	    <p> Das Opfer betrachtet Samis Profil, der Code aktiviert sich. </p>
+	    <h4> Schritt 2</h4>
+	    <p>
+		Der Code bringt den Browser des Opfers dazu eine Freundschaftsanfrage an Samy zu senden
+		,Samy in die "Hero-Liste" zu setzen und zu posten "but most of all samy is my hero"
+		und als kleines Present dazu, den Schadcode der auf Samys MySpace Profil den Browser dazu brachte eben genau das zu tun.
+	    </p>
+	    <h4>Schritt 3</h4>
+	    <p>
+		Jemand guckt auf das Profil dieser infizierten Person und <b>Schritt 2</b> wiederholt sich.
+		Um Samy Kamkar zu zitieren:
+		<cite> So if 5 people viewed my profile, that's 5 new friends.
+		    If 5 people viewed each of their profiles, that's 25 more new friends.
+		    And after that, well, that's when things get difficult. The math, I mean.
+		</cite>
+
+Some people would call this a worm. I call it popularity. Regardless, I don't care about popularity, but it can't hurt, right? 
+	    </p>
+	<h3> 4.10.2005. </h3>
+	  <h4> Ground Zero: Los Angeles,Califonia</h4>
+	  <p>
+	    <b>24:34 Uhr:</b> Aktueller Stand <b> 73 Freunde, 0 Freundesanfragen</b>,
+	    der Virus oder auch freundlich "popularity programm", wie Samy seine Kreation nennt,
+	    wird auf Myspace losgelassen!
+	  </p>
+	  <p>
+	    <b>1:30 Uhr:</b> Aktueller Stand <b> 73 Freunde, 1 Freundesanfrage </b>,
+	    das erste Profil fällt dem Wurm zum Opfer, es handelt sich um eine Freundin von Samys fester Freundin.
+	    Begleitet von einem verschmitzem Lächeln geht er ins Bett.
+	  </p>
+	  <p>
+	    <b>8:35 Uhr:</b> Aktueller Stand <b> 74 Freunde, 221 Freundesanfragen </b>,
+	    Überrascht blickt Samy auf die Verbreitungsrate. 200 Infizierte Profile in 8 Stunden,
+	    das sind also 600 neue Freunde jeden Tag nach seiner Einschätzung.
+	  </p>
+	  <p>
+	    <b>9:30 Uhr:</b> Aktueller Stand <b> 74 Freunde, 480 Freundschaftsanfragen</b>,
+	    Nach circa einer Stunde fällt ihm dann auch mal auf ,dass das Wachstum exponentiell ist.
+	  </p>
+	  <p>
+	    <b>10:30 Uhr:</b> Aktueller Stand <b> 518 Freunde, 561 Freundschaftsanfragen</b>,
+	    Eine Menge Nachrichten trudeln in sein Postfach wie zum Henker er
+	    in den Freundeslisten gelandet ist obwohl er nicht geadded wurde.
+	    Aber nicht alle beschweren sich darüber, darunter auch einige Frauen, diese Tatsache macht Samy Hoffnungen.
+	  </p>
+	  <p>
+	    <b>13:30 Uhr:</b> Aktueller Stand <b> 2.503 Freunde, 6.373 Freundschaftsanfragen</b>,
+	    der Virus verbreitet sich in rasender Geschwindigkeit, Samy versucht seinen Account zu löschen.
+	    Der Accountlöschungsprozess dauert 24 Stunden. In der zwischenzeit wird er mit wütenden Fragen bombardiert,
+	    von Leuten die ihn aus ihren Freundeslisten löschen und sofort wieder reinfiziert werden ,da sie auf infizierte Profile schauen.
+	    Samys Hoffnungen nicht bis auf die Knochen verklagt zu werden sinken mit jeder Minute, denn Samy hat keine Angst vor MySpace.
+	    Aber vor den Leuten die MySpace gekauft haben und gute Juristen haben müssen. Niemand anderes als Fox News hat MySpace wenige
+	    Wochen vorher für 580 Millionen Dollar erstanden!
+	  </p>
+	  <p>
+	    <b>18:20 Uhr:</b> Aktueller Stand <b> 2.503 Freunde, 917.084 Freundeschatsanfragen </b>,
+	    im Sekundentakt kommen Tausende Freundschaftsanfragen hinzu, wenige Minuten später ist es soweit.
+	    <b> 1.005.831 Freundschaftsanfragen </b> in unter 20 Stunden.
+	    Das Programm tat seinen Dienst er ist definitiv populär geworden.
+	    Er versucht sein Profil neu zu laden. <i> This profile is down for maintenance.</i>
+	    <b> FUCK.</b>
+	    Um runterzukommen, mit dem Versprechen an sich nie wieder etwas Illegaes zu tun, erst mal eine illegal gesogene Folge Nip/Tuck.
+	  </p>
+	  <p>
+	    <b>19:05 Uhr:</b> Freunde von Samy berichten ihm das MySpace auch für sie nichts mehr tut.
+	    Es ist kein Problem von Samys Profil. <b> MySpace ist offline. DOPPEL FUCK. </b> Samy zieht real in Erwägung zu den MySpace
+	    Büros zu fahren um sich zu entschuldigen.
+	  </p>
+	  <p>
+	    <b>21:30 Uhr</b> MySpace ist wieder online! Der Wurm wurde ebenfalls von den Profilen genommen.
+	    "samy is my hero" still remains on the pages of a lot of people.
+	  </p>
+	  <h2> Postmortem </h2>
+	  <p> Samy Kamkar wurde in 2006 ,vom Secret Service und der Electronic Crimes Task Force festgenommen.
+	      Samy akzeptierte einen Deal , der ein Strafgeld von 20.000$, 3 Jahre Computerverbot und 270 Stunden Gemeinnützige Arbeit
+	      beinhaltete.
+	      Seit 2008 ist er selbstständiger Cyber Security Researcher und Consultant.
+	      JS.Spacehero öffnete quasi eine Büchse der Pandora, als erster selbst replizierender Java-Script Wurm öffnete er die Tür für
+	      kreative Offensiv Möglichkeiten gegen Webseiten. Heutzutage ist XSS <b> die Attacke </b>
+	      ,vor der sich jede Seite gründlich schützen muss.
+	  </p>
+	  <h4> Weitere Information</h4>
+	  <p>
+	      Weitere Informationen und den detailierten Weg zum Exploid finden sie hier auf Samy Kamkars persönlicher Webseite.
+	      Der Exploid ist deutlich komplizierter als die hier Skizzierten Versionen des XSS, da MySpace sich in bestimmten Zügen
+	      jedenfalls dagegen verteidigte. Es ist eine faszinierende Leseerfahrung und sehr empfehlenswert wenn man nach vollziehen
+	      wie der Gedankengang während des planens einer solchen Attacke aussieht.
+	  </p>
+	  <nav>
+	      <li><a href="https://www.samy.pl/myspace/">Die Exploid Erklärung</a></li>
+	      <li><a href="https://www.samy.pl/myspace/tech.html">Die Geschichte auf seiner Webseite erzählt</a></li>
+	  </nav>
+	<nav>
+	    <ul>
+	<li><a href="./Homepage.html">Zurück zur Homepage</a></li>
+	    </ul>
+	</nav>
+    </body>
+</html>

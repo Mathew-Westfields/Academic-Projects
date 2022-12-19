@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="day_data">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="positiv_getestet" type="xs:integer"/>
+      <xs:element name="geschaetzt_infektioes" type="xs:integer"/>
+      <xs:element name="inzidenz" type="xs:decimal"/>
+      <xs:element name="genesen" type="xs:integer"/>
+    </xs:sequence> 
+    <xs:attribute name="date" type="xs:date" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="month_data">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="day_data" minOccurs="1" maxOccurs="31"/>
+        </xs:sequence>
+        <xs:attribute name = "first_date" type="xs:date"/>
+        <xs:attribute name = "last_date" type="xs:date"/>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="corona_data">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="month_data" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>

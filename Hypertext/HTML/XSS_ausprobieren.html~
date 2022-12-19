@@ -1,0 +1,29 @@
+<?php
+ echo "HelloWorld" 
+ ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="widt=device-width, initial-scale=1.0"/>
+	<title>XSS Spielplatz</title>
+    </head>
+    <body>
+	<div class="header">
+	    <h1>Spielplatz</h1>
+	    <h2>Spaß haben mit schlechtem php</h2>
+	</div>
+	<div class="article">
+	    <p>
+	      Dieser Link führt zu einer Webseite die ein Vorsätzlich schlechtes php Eingabe fenster hat.
+	      
+	    </p>
+	   
+	    <nav>
+	      <ul>
+		<li><a href="./Homepage.html">Zurück zur Homepage</a></li>
+	      </ul>
+	    </nav>
+    </body>
+</html>
